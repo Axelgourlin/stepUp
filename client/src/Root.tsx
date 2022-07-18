@@ -4,6 +4,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import { RecoilRoot } from 'recoil';
 
 import ThemeProvider from '@/theme/Provider';
+import { ApolloProvider } from '@apollo/client';
+import { apolloClient } from './apollo/Apolloclient';
 
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
@@ -14,7 +16,9 @@ function render(App: ComponentType) {
       <RecoilRoot>
         <HelmetProvider>
           <ThemeProvider>
-            <App />
+            <ApolloProvider client={apolloClient}>
+              <App />
+            </ApolloProvider>
           </ThemeProvider>
         </HelmetProvider>
       </RecoilRoot>

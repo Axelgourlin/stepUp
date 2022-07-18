@@ -16,10 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
-    "rootDir": "/client",
-    "types": [
-      "vite-plugin-pwa/client",
-    ],
+    "types": ["vite-plugin-pwa/client"],
     "paths": {
       "@/*": ["src/*"]
     }

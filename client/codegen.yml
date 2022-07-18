@@ -1,0 +1,15 @@
+schema: '../server/src/schema.graphql'
+documents: './src/apollo/graphql/**/*.graphql'
+overwrite: true
+watch: true
+generates:
+  src/apollo/generated/graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+      - 'typescript-graphql-files-modules'
+      - 'typescript-document-nodes'
+      - 'fragment-matcher'
+    config:
+      withHooks: true
